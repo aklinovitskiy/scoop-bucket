@@ -3,7 +3,7 @@
     "license": "MIT",
     "description": "The simple countdown timer for Windows",
     "version": "1.10",
-    "url": "https://github.com/dziemborowicz/hourglass/releases/download/v1.10.0/HourglassPortable.exe#Hourglass.exe",
+    "url": "https://github.com/dziemborowicz/hourglass/releases/download/v1.10.0/HourglassPortable.exe#/Hourglass.exe",
     "shortcuts": [
         [
             "Hourglass.exe",
