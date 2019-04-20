@@ -1,0 +1,45 @@
+{
+    "homepage": "https://www.elastic.co/products/beats/winlogbeat",
+    "description": "Lightweight Shipper for Windows Event Logs",
+    "version": "6.7.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-6.7.1-windows-x86_64.zip",
+            "hash": "sha512:01717f7ee378fb0fa0b6f108e84c5975fa9297503c4f56ece480adb2fe6ce371e0bfa2c49ba4be8911c70fe5ddb60ce660ad38adaed4f2d9dcb5f36413f043cd",
+            "extract_dir": "winlogbeat-6.7.1-windows-x86_64"
+        },
+        "32bit": {
+            "url": "https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-6.7.1-windows-x86.zip",
+            "hash": "sha512:0f8334a5d2e0b586f3d67007d17768ca2c286315545a7832da96908c19a52e2e7c07e04472931b2c08ca357dfa6887ed533249ba5966bf9c4aafb46d00746f99",
+            "extract_dir": "winlogbeat-6.7.1-windows-x86"
+        }
+    },
+    "bin": "winlogbeat.exe",
+    "persist": [
+        "data",
+        "logs",
+        "winlogbeat.yml"
+    ],
+    "checkver": {
+        "url": "https://www.elastic.co/downloads/past-releases",
+        "re": "winlogbeat-([\\d.]+)-windows-x86_64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-$version-windows-x86_64.zip",
+                "extract_dir": "winlogbeat-$version-windows-x86_64",
+                "hash": {
+                    "url": "$url.sha512"
+                }
+            },
+            "32bit": {
+                "url": "https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-$version-windows-x86.zip",
+                "extract_dir": "winlogbeat-$version-windows-x86",
+                "hash": {
+                    "url": "$url.sha512"
+                }
+            }
+        }
+    }
+}
