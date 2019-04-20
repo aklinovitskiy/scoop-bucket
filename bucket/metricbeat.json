@@ -1,0 +1,46 @@
+{
+    "homepage": "https://www.elastic.co/products/beats/metricbeat",
+    "description": "Lightweight Shipper for Metrics",
+    "version": "6.7.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.7.1-windows-x86_64.zip",
+            "hash": "sha512:5c96697b1d7946495fb637e4a26460846c052a70f17bd14c569531b2d67bdd8b1541a9cedf290eb88bd080f12c8489f2006fb648a7d4df915bba5461b794876f",
+            "extract_dir": "metricbeat-6.7.1-windows-x86_64"
+        },
+        "32bit": {
+            "url": "https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.7.1-windows-x86.zip",
+            "hash": "sha512:c04cdc4662ab9a19a03952e438bf9571348a5a94df7a511320681f4ec59bee481bec8636556c82db1fe444d802484245dd53b2bc08911190fc358093cb1f346a",
+            "extract_dir": "metricbeat-6.7.1-windows-x86"
+        }
+    },
+    "bin": "metricbeat.exe",
+    "persist": [
+        "data",
+        "logs",
+        "modules.d",
+        "metricbeat.yml"
+    ],
+    "checkver": {
+        "url": "https://www.elastic.co/downloads/past-releases",
+        "re": "metricbeat-([\\d.]+)-windows-x86_64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-$version-windows-x86_64.zip",
+                "extract_dir": "metricbeat-$version-windows-x86_64",
+                "hash": {
+                    "url": "$url.sha512"
+                }
+            },
+            "32bit": {
+                "url": "https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-$version-windows-x86.zip",
+                "extract_dir": "metricbeat-$version-windows-x86",
+                "hash": {
+                    "url": "$url.sha512"
+                }
+            }
+        }
+    }
+}
