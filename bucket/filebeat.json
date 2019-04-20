@@ -26,10 +26,21 @@
         "re": "filebeat-([\\d.]+)-windows-x86_64.zip"
     },
     "autoupdate": {
-        "url": "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-$version.zip",
-        "extract_dir": "elasticsearch-$version",
-        "hash": {
-            "url": "$url.sha512"
+        "architecture": {
+            "64bit": {
+                "url": "https://artifacts.elastic.co/downloads/beats/filebeat-$version-windows-x86_64.zip",
+                "extract_dir": "filebeat-$version-windows-x86_64",
+                "hash": {
+                    "url": "$url.sha512"
+                }
+            },
+            "32bit": {
+                "url": "https://artifacts.elastic.co/downloads/beats/filebeat-$version-windows-x86.zip",
+                "extract_dir": "filebeat-$version-windows-x86",
+                "hash": {
+                    "url": "$url.sha512"
+                }
+            }
         }
     }
 }
