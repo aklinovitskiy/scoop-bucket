@@ -1,0 +1,35 @@
+﻿{
+    "homepage":  "https://www.elastic.co/products/beats/filebeat",
+    "description": "Lightweight Shipper for Logs",
+    "version":  "6.7.1",
+    "architecture": {
+        "64bit": {
+            "url":  "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.7.1-windows-x86_64.zip",
+            "hash":  "sha512:d370ff17a1934c142f039a1c9d84f2c98801893da8f9f4ce5323fdd82fc2a74b4c4bf80e7bea36a58e6cc28e2dc44c23d1692b4dcf6cd9ae298f49b76d35f741",
+            "extract_dir":  "filebeat-6.7.1-windows-x86_64"
+        },
+        "32bit": {
+            "url": "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.7.1-windows-x86.zip",
+            "hash": "sha512:437b76c0ca9662eafe1e8cddfa0eecc734beb51d4142aad1186c120c08aea884425847df18ddcdfb0cd407640aed268f6e347a733aa3a0debe2e7acbcc45a6b6",
+            "extract_dir": "filebeat-6.7.1-windows-x86"
+        }
+    },
+    "bin":  "filebeat.exe",
+    "persist": [
+        "data",
+        "logs",
+        "modules.d",
+        "filebeat.yml"
+    ],
+    "checkver": {
+        "url": "https://www.elastic.co/downloads/past-releases",
+        "re": "filebeat-([\\d.]+)-windows-x86_64.zip"
+    },
+    "autoupdate": {
+        "url": "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-$version.zip",
+        "extract_dir": "elasticsearch-$version",
+        "hash": {
+            "url": "$url.sha512"
+        }
+    }
+}
