@@ -2,15 +2,30 @@
     "homepage": "http://oscript.io/",
     "description": "Runtime Environment for Scripts on 1C",
     "license": "MPL-2.0",
-    "version": "1.2.0",
-    "url": "https://oscript.io/downloads/1_2_0/x64/OneScript-1.2.0-x64.zip#/dl.7z",
-    "hash": "99aad0cb315eb49a985d8cf036eddf61df7e6aa8c944e54e0727da0b0ec8e63a",
+    "version": "1.4.0",
+    "architecture": {
+        "32bit": {
+            "url": "https://oscript.io/downloads/1_4_0/OneScript-1.4.0-x86.zip#/dl.7z",
+            "hash": "790045a9e0c1a13a401c5899d7babc6b5995528fb45e7ab5d9ed47ccbc9aec80"
+        },
+        "64bit": {
+            "url": "https://oscript.io/downloads/1_4_0/x64/OneScript-1.4.0-x64.zip#/dl.7z",
+            "hash": "e503e4261d459da24629622bd229308d72f6dadcdb30aa873d46bd77bd973d6a"
+        }
+    },
     "persist": "lib",
+    "env_add_path": "bin",
     "checkver": {
         "github": "https://github.com/EvilBeaver/OneScript"
     },
     "autoupdate": {
-        "url": "https://github.com/EvilBeaver/OneScript/releases/download/v$version/OneScript-$version.zip#/dl.7z"
-    },
-    "env_add_path": "bin"
+        "architecture": {
+            "32bit": {
+                "url": "https://oscript.io/downloads/$underscoreVersion/OneScript-$version-x86.zip#/dl.7z"
+            },
+            "64bit": {
+                "url": "https://oscript.io/downloads/$underscoreVersion/x64/OneScript-$version-x64.zip#/dl.7z"
+            }
+        }
+    }
 }
