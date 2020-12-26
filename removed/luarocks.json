@@ -1,0 +1,37 @@
+﻿{
+    "homepage": "https://luarocks.org/",
+    "description": "Package manager for the Lua programming language",
+    "license": "MIT",
+    "version": "3.3.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://luarocks.github.io/luarocks/releases/luarocks-3.3.1-windows-64.zip",
+            "hash": "a69d6da50079f0f61491636b37e0fa3e0c0541530ebd9ef143606e533526d967",
+            "extract_dir": "luarocks-3.3.1-windows-64"
+        },
+        "32bit": {
+            "url": "https://luarocks.github.io/luarocks/releases/luarocks-3.3.1-windows-32.zip",
+            "hash": "2f1fbdc79118155790bb7c459dc51f9832360b7268e328db777ab98ee7341a5a",
+            "extract_dir": "luarocks-3.3.1-windows-32"
+        }
+    },
+    "bin": [
+        "luarocks.exe",
+        "luarocks-admin.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/luarocks/luarocks"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://luarocks.github.io/luarocks/releases/luarocks-$version-windows-64.zip",
+                "extract_dir": "luarocks-$version-windows-64"
+            },
+            "32bit": {
+                "url": "https://luarocks.github.io/luarocks/releases/luarocks-$version-windows-32.zip",
+                "extract_dir": "luarocks-$version-windows-32"
+            }
+        }
+    }
+}
