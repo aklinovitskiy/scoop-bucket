@@ -1,0 +1,20 @@
+{
+    "homepage": "https://www.syvik.com/multidesk/",
+    "description": "Tabbed remote desktop client (terminal services client)",
+    "version": "3.16",
+    "license": "Proprietary",
+    "url": "https://www.syvik.com/multidesk/multidesk_3_16.zip",
+    "hash": "md5:a42cf10cc416c703b08501686562d797",
+    "extract_dir": "MultiDesk",
+    "bin": ["MultiDesk.exe", "MultiDesk64.exe"],
+    "shortcuts": [
+        [
+            "MultiDesk.exe",
+            "MultiDesk"
+        ],
+        [
+            "MultiDesk64.exe",
+            "MultiDesk64"
+        ]
+    ]
+}
