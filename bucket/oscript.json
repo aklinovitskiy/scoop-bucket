@@ -2,15 +2,15 @@
     "homepage": "http://oscript.io/",
     "description": "Runtime Environment for Scripts on 1C",
     "license": "MPL-2.0",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "architecture": {
         "32bit": {
-            "url": "https://oscript.io/downloads/1_5_0/OneScript-1.5.0-x86.zip#/dl.7z",
-            "hash": "9bb349b774831a0cb2000fb3deb1963db7f7f581c4a0c6e478123a719053fe09"
+            "url": "https://oscript.io/downloads/1_6_0/OneScript-1.6.0-x86.zip#/dl.7z",
+            "hash": "0129fcbb1acf178e0b0ec8a5e2683604ae5147fb712e85e99500f9abaa1a1a1a"
         },
         "64bit": {
-            "url": "https://oscript.io/downloads/1_5_0/x64/OneScript-1.5.0-x64.zip#/dl.7z",
-            "hash": "e6aa09a314e020c4a06553493b0c4c9392d4892cff967dbffe7a41ef0b890dc6"
+            "url": "https://oscript.io/downloads/1_6_0/x64/OneScript-1.6.0-x64.zip#/dl.7z",
+            "hash": "3125270d7fc2b3281e41efc154f14fb7528c8b84842583fb5785b03651096800"
         }
     },
     "persist": "lib",
